@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Munazza's Portfolio</title>
   <link rel="icon" type="image/x-icon" href="favicon1.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
     * {
@@ -391,6 +391,86 @@
     html {
       scroll-behavior: smooth;
     } 
+
+    .skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.badge {
+  background-color: #8C705E;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: default;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  background-color: #6D5844;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background: #8C705E; /* Match theme */
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(140, 112, 94, 0.6);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+#backToTop:hover {
+  background: #6D5844; /* Darker shade on hover */
+  color: white;
+  box-shadow: 0 0 25px rgba(140, 112, 94, 0.9);
+}
+
+@media (max-width: 768px) {
+  #backToTop {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    bottom: 20px;
+    right: 15px;
+  }
+}
+
+.resume-button {
+  background-color: #8C705E;
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #6D5844;
+  box-shadow: 0px 0px 8px #6D5844;
+}
+
+.resume-button {
+  margin-bottom: 30px; /* You can adjust the value */
+}
+
   </style>
 </head>
 <body>
@@ -418,12 +498,24 @@
     </nav>
 
     <!-- About Me Section -->
-    <section id="about-me">
-      <h2 class="section-header">About Me</h2>
-      <p class="description">Hey, I am Munazza, and I am a BCA final year student. <br>I enrolled in a Full Stack Development course to build my skills in both frontend and backend technologies. I'm excited to learn and implement what I’ve learned to create websites, applications, and real-world projects as I grow in this field.</p>
+<section id="about-me">
+  <h2 class="section-header">About Me</h2>
+  <p class="description">
+    Hey, I am Munazza, a BCA graduate with a passion for technology and development. <br>
+    I recently completed a Full Stack Development course to build my skills in both frontend and backend technologies. 
+    I’m excited to apply what I’ve learned to create websites, applications, and real-world projects as I continue to grow in this field.
+  </p>
+  <div class="contact-form" style="margin-top: 30px;">
+    <a href="Resume Munazza Jabeen.pdf" target="_blank" download>
+      <button class="resume-button">Download Resume</button>
+    </a>
+  </div>
+</section>
+
+
       <h3 class="sub-header">Hobbies</h3>
-    <p class="description">I often escape into books, sketch scenes from my imagination, and write stories—basically, I love creating things, whether it’s with words, lines, or code.<br>These things help me disconnect from the real world while giving me a way to express myself. I think that’s why coding calls to me—it’s another way to bring my ideas to life and share them with others.</p>
-      <dl>
+      <p class="description">I often escape into books, sketch scenes from my imagination, and write stories—basically, I love creating things, whether it’s with words, lines, or code.<br>These things help me disconnect from the real world while giving me a way to express myself. I think that’s why coding calls to me—it’s another way to bring my ideas to life and share them with others.</p> 
+    <dl>
       <dt>✦  Reading  ✦</dt>
       <dd>I like to read books of various genres. This is a hobby that I picked back in school when my teachers used to encourage us to read as much as we could. I like to read Classics, High Fantasy, Historical Fiction, and Mystery. Reading is a way for me to live countless lives through different characters, understand the world through different minds, look at things through different points of view, and experience a lot of things that I might not be able to do in real life.</dd>
       <dt>✦  Writing  ✦</dt>
@@ -465,61 +557,38 @@
         </div>
     </section>
 
-
-    <!-- Skills Section -->
+    <!--Skills Section-->
     <section id="skills">
       <h2 class="section-header">Skills</h2>
 
     <!-- Technical Skills -->
-    <h3 class="skill-category">Technical Skills</h3>
-    <div class="skills">
-      <div class="skill">
-        <h4>HTML</h4>
-        <p>Building structured and semantic web pages.</p>
-      </div>
-      <div class="skill">
-        <h4>CSS</h4>
-        <p>Styling responsive and modern websites.</p>
-      </div>
-      <div class="skill">
-        <h4>Bootstrap</h4>
-        <p>Currently learning.</p>
-      </div>
-      <div class="skill">
-        <h4>JavaScript</h4>
-        <p>Next skill that I'll be learning.</p>
-      </div>
-      <div class="skill">
-        <h4>Java</h4>
-        <p>Learning soon.</p>
-      </div>
-      <div class="skill">
-        <h4>SQL</h4>
-        <p>Learning soon.</p>
-      </div>
-    </div>
+      <h3 class="skill-category">Technical Skills</h3>
+        <div class="skill-badges">
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">Bootstrap</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">Java</span>
+          <span class="badge">PostgreSQL</span>
+          <span class="badge">Node.js</span>
+          <span class="badge">Mendix (Learning)</span>
+          <span class="badge">Figma (Upcoming)</span>
+          <span class="badge">C++ (Basics)</span>
+       </div>
 
     <!-- General Skills -->
-    <h3 class="skill-category">General Skills</h3>
-    <div class="skills">
-      <div class="skill">
-        <h4>Communication</h4>
-        <p>I'm learning to express myself better and listen deeply—quiet, but intentional in how I connect with others.</p>
-      </div>
-      <div class="skill">
-        <h4>Writing</h4>
-        <p>I’ve been growing my creative writing skills by exploring poetry and am now working on my first novel.</p>
-      </div>
-      <div class="skill">
-        <h4>Art</h4>
-        <p>When words fall short, I express myself through drawing and art. I've illustrated scenes from my novel and created personal pieces for friends.</p>
-      </div>
-    </div>
+      <h3 class="skill-category" style="margin-top: 40px;">General Skills</h3>
+        <div class="skill-badges">
+          <span class="badge">Communication</span>
+          <span class="badge">Creative Writing</span>
+          <span class="badge">Drawing</span>
+          <span class="badge">Art & Illustration</span>
+        </div>
     </section>
 
 
     <!--Projects Section-->
-    <section id="projects">
+<section id="projects">
   <h2 class="section-header">Projects</h2>
   <div class="projects">
     <div class="project">
@@ -528,8 +597,8 @@
           <h4>Project 1: <br> My Portfolio Website</h4>
         </div>
         <div class="project-back">
-          <p>Details about Project 1: <br>Built using HTML and CSS.</p>
-          <a href="https://github.com/Munazza-J" target="_blank">View Project</a>
+          <p>Built using HTML and CSS.</p>
+          <a href="https://github.com/Munazza-J/portfolio" target="_blank">View Project</a>
         </div>
       </div>
     </div>
@@ -540,20 +609,21 @@
           <h4>Project 2: <br> Register & Login Page</h4>
         </div>
         <div class="project-back">
-          <p>Details about Project 2: <br>Made with HTML and CSS.</p>
-          <a href="https://github.com/Munazza-J" target="_blank">View Project</a>
+          <p>Simple authentication page using HTML and CSS.</p>
+          <a href="https://github.com/Munazza-J/register-login" target="_blank">View Project</a>
         </div>
       </div>
     </div>
-    <!-- Add more projects similarly -->
+
     <div class="project">
       <div class="project-inner">
         <div class="project-front">
-          <h4>Others...</h4>
+          <h4>Project 3: <br> NoteLog</h4>
+          <p>Student blog/notes sharing website. Ongoing project.</p>
         </div>
         <div class="project-back">
-          <p>More projects will be added here as I continue my learning journey.</p>
-          <a href="https://github.com/Munazza-J" target="_blank">View Project</a>
+          <p>Designed the frontend using HTML, CSS, JavaScript, and Bootstrap. Developed backend using PostgreSQL, Node.js, and Express.</p>
+          <a href="https://github.com/Munazza-J/NoteLog" target="_blank">View Project</a>
         </div>
       </div>
     </div>
@@ -581,1801 +651,44 @@
     </section>
 
     <!-- Footer -->
+    <!-- Footer -->
     <footer>
       <p>&copy; 2025 Munazza Jabeen | All rights reserved.</p>
   <p>Follow me on:
-    <a href="https://www.linkedin.com/in/m-j-9711b8343" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-linkedin"></i>
+    <a href="https://www.linkedin.com/in/munazza-jabeen/" target="_blank" style="text-decoration: none; margin: 0 10px;">
+      <i class="fab fa-linkedin fa-lg"></i>
     </a> |
-    <a href="https://github.com/Munazza-J" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-github"></i>
+    <a href="https://github.com/Munazza-J" target="_blank" style="text-decoration: none; margin: 0 10px;">
+      <i class="fab fa-github fa-lg"></i>
     </a> |
-    <a href="https://www.instagram.com/onceuponamooon/" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-instagram"></i>
+    <a href="https://www.instagram.com/onceuponamooon/" target="_blank" style= "text-decoration: none; margin: 0 10px;">
+      <i class="fab fa-instagram fa-lg"></i>
     </a>
       </p>
     </footer>
   </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<div id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+<script>
+  window.onscroll = function () {
+    const btn = document.getElementById("backToTop");
+    if (window.scrollY > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Munazza's Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="favicon1.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Times New Roman", Times, serif;
-    }
-
-    body {
-      background-color: #F3E9DD;
-      color: #4A3F35;
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    /* Hero Section */
-    .hero {
-      background-color: #F3E9DD;
-      color: #8C705E;
-      text-align: center;
-      padding: 80px 20px;
-      border-radius: 8px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.3rem;
-      font-weight: 300;
-      font-style: italic;
-    }
-
-    .hero img {
-      border-radius: 50%;
-      margin-top: 20px;
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    /* Navigation */
-    nav {
-      background-color: #8C705E;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-    }
-
-    nav ul li {
-      margin: 0 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #F3E9DD;
-      font-size: 1.1rem;
-      font-weight: 500;
-      padding: 10px 20px;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background-color: #F3E9DD;
-      color: #6D5844;
-      border-radius: 5px;
-    }
-
-    /* Section Style */
-    section {
-      margin-top: 50px;
-      padding: 50px 0;
-    }
-
-    .section-header {
-      color: #7C5E4E;
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    .sub-header {
-      color: #8D6A5D;
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
-
-    .description {
-      font-size: 1.2rem;
-      font-weight: 300;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    
-    dl {
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    dt {
-      font-weight: bold;
-      background-color: #F3E9DD;
-      padding: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      color: #6D5844;
-      font-size: 1.2rem;
-      text-align: center;
-    }
-
-    dt:hover {
-      background-color: #E6D3C3;
-    }
-
-    dd {
-      display: none;
-      margin: 0 0 10px 20px;
-      font-size: 1.1rem;
-    }
-
-    dt:hover + dd {
-      display: block;
-    }
-    
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-
-    tr:hover {
-      background-color: #E6D3C3; 
-    }
-
-    th {
-      background-color: #8C705E;
-      color: #fff;
-      font-size: 1.2rem;
-    }
-    td {
-      font-size: 1.1rem;
-    }
-
-    h3 {
-      text-align: center; 
-    }
-    
-
-    .education-table {
-      background-color: #F3E9DD;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .skills, .education, .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 30px;
-      margin-top: 30px;
-    }
-
-    .skill, .education-item, .project {
-      background-color: #F3E9DD;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 30%;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .skill h4, .education-item h3, .project h4 {
-      color: #8C705E;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
-
-    .education-item p {
-      color: #6D5844;
-    }
-    
-    .skill p {
-      color: #6D5844;
-      font-size: 1.1rem;
-    }
-
-    .project p {
-      color: #6D5844;
-      font-size: 1.1rem;
-    }
-
-    .contact-form {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .contact-form input, .contact-form textarea {
-      width: 80%;
-      padding: 15px;
-      margin: 10px;
-      border-radius: 8px;
-      border: 1px solid #D4A373;
-      font-size: 1rem;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .contact-form button {
-      background-color: #8C705E;
-      color: #fff;
-      padding: 15px 25px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-    }
-
-    .contact-form button:hover {
-      background-color: #6D5844;
-    }
-
-    .pinterest-embed {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-
-  iframe {
-    max-width: 100%;
-    height: auto;
-  }
-
-
-    /* Footer */
-    footer {
-      background-color: #8C705E;
-      color: #F3E9DD;
-      padding: 20px 0;
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    footer a {
-      color: #F3E9DD;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer a:hover {
-      color: #D4A373;
-    }
-
-    /* Media Queries */
-    @media (max-width: 768px) {
-      .skills, .education, .projects {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .skill, .education-item, .project {
-        width: 80%;
-        margin-bottom: 20px;
-      }
-    }
-    
-    html {
-      scroll-behavior: smooth;
-    } 
-
-
-  </style>
-</head>
-<body>
-  <div class="container">
-    <!-- Hero Section --
-    <section class="hero">
-      <h1>Munazza Jabeen</h1>
-      <p>Learning to build the web, one line at a time.</p> 
-      <img src="mee.png" alt="Munazza Jabeen">
-    </section>
-
-    <!-- Navigation --
-    <nav>
-      <ul>
-        <li><a href="#about-me">About Me</a></li>
-        
-        <li><a href="#education">Education</a></li>
-        
-        <li><a href="#skills">Skills</a></li>
-        
-        <li><a href="#projects">Projects</a></li>
-        
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- About Me Section --
-    <section id="about-me">
-      <h2 class="section-header">About Me</h2>
-      <p class="description">Hey, I am Munazza, and I am a BCA final year student. <br>I enrolled in a Full Stack Development course to build my skills in both frontend and backend technologies. I'm excited to learn and implement what I’ve learned to create websites, applications, and real-world projects as I grow in this field.</p>
-      <h3 class="sub-header">Hobbies</h3>
-    <p class="description">I often escape into books, sketch scenes from my imagination, and write stories—basically, I love creating things, whether it’s with words, lines, or code.<br>These things help me disconnect from the real world while giving me a way to express myself. I think that’s why coding calls to me—it’s another way to bring my ideas to life and share them with others.</p>
-      <dl>
-      <dt>✦  Reading  ✦</dt>
-      <dd>I like to read books of various genres. This is a hobby that I picked back in school when my teachers used to encourage us to read as much as we could. I like to read Classics, High Fantasy, Historical Fiction, and Mystery. Reading is a way for me to live countless lives through different characters, understand the world through different minds, look at things through different points of view, and experience a lot of things that I might not be able to do in real life.</dd>
-      <dt>✦  Writing  ✦</dt>
-      <dd>All the reading naturally inspired me to write my own stories. It started with diaries and journaling, turned into writing down ideas that I wouldn't work on, until recently when I found time to finally start writing. I've written a few poems so far, and I am working on a book as well. Writing really helps me express myself, share my imagination, dreams, and views, and give insight into my character, thoughts, and feelings.</dd>
-      <dt>✦ Drawing ✦</dt>
-      <dd>I sometimes draw, paint, or do digital art. It's a good way to show my artistic side, there are so many things everywhere that inspire me—the books I read, nature, life, and so on. I also draw a few scenes from the book that I am writing.</dd>
-      <dt>✦Threading✦</dt>
-      <dd>One of the many skills that I learned from school is needlework. I know how to embroider, stitch, and crochet. I stitch the most and I also learned how to knit but never really practiced that skill unlike the others. The feeling of wearing or using something that I made by myself is indescribable.</dd>
-    </dl>
-    </section>
-    
-    <!--Education Section--
-    <section id="education">
-      <h2 class="section-header">Educational Background</h2>
-      
-        <div class= "education-table">
-          <table>
-      <tr>
-        <th>Degree</th>
-        <th>Institution</th>
-        <th>Graduation Year</th>
-      </tr>
-      <tr>
-        <td>Bachelor of Computer Applications (BCA)</td>
-        <td>Siddhartha Degree College For Women</td>
-        <td>2025</td>
-      </tr>
-      <tr>
-        <td>Intermediate (12th Grade)</td>
-        <td>MS Junior College</td>
-        <td>2022</td>
-      </tr>
-      <tr>
-        <td>High School</td>
-        <td>Princess Esin Girls High School</td>
-        <td>2020</td>
-      </tr>
-          </table>
-        </div>
-    </section>
-
-    <!-- Skills Section --
-    <section id="skills">
-      <h2 class="section-header">Skills</h2>
-      <div class="skills">
-        <div class="skill">
-          <h4>HTML</h4>
-          <p>Building structured and semantic web pages.</p>
-        </div>
-        <div class="skill">
-          <h4>CSS</h4>
-          <p>Styling responsive and modern websites.</p>
-        </div>
-        <div class="skill">
-          <h4>JavaScript</h4>
-          <p>Next skill that I'll be learning.</p>
-        </div>
-      </div>
-    </section>
-
-    <!--Projects Section--
-    <section id="projects">
-      <h2 class="section-header">Projects</h2>
-      <div class="projects">
-        <div class="project">
-          <h4>My Portfolio Website</h4>
-          <p>This is my first project. I used HTML and CSS to design this portfolio. </p>
-        </div>
-        <div class="project">
-          <h4>Registration&Login Page</h4>
-          <p>I made a simple registration and login page using just HTML and CSS. I'll improve it as I learn more.</p>
-        </div>
-        <div class="project">
-          <h4>Others</h4>
-          <p>More projects will be added here as I continue my learning journey.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section --
-    <section id="contact">
-      <h2 class="section-header">Contact</h2>
-      <div class="contact-form">
-        <form action="https://formspree.io/f/mdkerogd" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-    </section>
-
-    <section>
-      <div class="pinterest-embed">
-       <iframe src="https://assets.pinterest.com/ext/embed.html?id=873979871454030965" height="200" width="250" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </section>
-
-    <!-- Footer --
-    <footer>
-      <p>&copy; 2025 Munazza Jabeen | All rights reserved.</p>
-  <p>Follow me on:
-    <a href="https://www.linkedin.com/in/m-j-9711b8343" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-linkedin"></i>
-    </a> |
-    <a href="https://github.com/Munazza-J" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-github"></i>
-    </a> |
-    <a href="https://www.instagram.com" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-instagram"></i>
-    </a>
-      </p>
-    </footer>
-  </div>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--SECOND VERSIONNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN-->
-<!--<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Munazza's Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="favicon1.ico">
-  <style>
-    * {
-      font-family: “Times New Roman”, Times, serif;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .header {
-      margin-top: 80px;
-      text-align: center;
-    }
-
-    .header h1 {
-      color: #7C5E4E;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #8C705E;
-      z-index: 1000;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-      border-bottom: 1px solid #B39283;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0 10px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 20px;
-      display: inline-block;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background-color: #F3E9DD;
-      color: #6D5844;
-      border-radius: 5px;
-    }
-
-    nav ul li a.active {
-      background-color: #B39283;
-      color: #F3E9DD;
-    }
-
-    .section-header {
-      color: #B39283;
-    }
-
-    .sub-header {
-      color: #8D6A5D;
-    }
-
-    .description {
-      font-size: 1.1em;
-    }
-
-    dl {
-      margin-top: 10px;
-    }
-
-    dt {
-      font-weight: bold;
-      background-color: #F3E9DD;
-      padding: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      color: #6D5844;
-    }
-
-    dt:hover {
-      background-color: #E6D3C3;
-    }
-
-    dd {
-      display: none;
-      margin: 0 0 10px 20px;
-    }
-
-    dt:hover + dd {
-      display: block;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-
-    tr:hover {
-      background-color: #E6D3C3; 
-    }
-
-    th {
-      background-color: #8C705E;
-      color: #fff;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .section-padding {
-      padding-top: 70px;
-    }
-   .pinterest-embed {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-
-  iframe {
-    max-width: 100%;
-    height: auto;
-  }
-
-  form {
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-  }
-
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-
-  button {
-    background-color: #8C705E;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: #6D5844;
-  }
-
-  </style>
-  <style>
-    #about-me, #education, #projects, #contact {
-    padding-top: 80px;      
-    margin-top: -80px;  
-  }
-  </style>
-
-  style for footer
-  <style>
-  footer a:hover {
-    color: #D4A373; 
-    text-decoration: underline;
-  }
-</style>
-
-</head>
-<body style="background-color: #F3E9DD; color: #4A3F35; margin: 0;">
-  <div class="container">
-    <header class="header">
-      <h1>Munazza Jabeen</h1>
-      <p>Learning to build the web, one line at a time.</p>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <img src="mee.png" alt="A picture to represent me" width="200" />
-    <h2 id="about-me" class="section-header">About Me</h2>
-    <p class="description">Hey, I am Munazza, and I am a BCA final year student. <br>I enrolled in this Full Stack Development course to build my skills in both frontend and backend technologies. I'm excited to learn and implement what I’ve learned to create websites, applications, and real-world projects as I grow in this field.</p>
-
-    <h3 class="sub-header">Hobbies</h3>
-    <p class="description">I often escape into books, sketch scenes from my imagination, and write stories—basically, I love creating things, whether it’s with words, lines, or code.<br>These things help me disconnect from the real world while giving me a way to express myself. I think that’s why coding calls to me—it’s another way to bring my ideas to life and share them with others.</p>
-    <dl>
-      <dt>✦ Reading</dt>
-      <dd>I like to read books of various genres. This is a hobby that I picked back in school when my teachers used to encourage us to read as much as we could. I like to read Classics, High Fantasy, Historical Fiction, and Mystery. Reading is a way for me to live countless lives through different characters, understand the world through different minds, look at things through different points of view, and experience a lot of things that I might not be able to do in real life.</dd>
-      <dt>✦ Writing</dt>
-      <dd>All the reading naturally inspired me to write my own stories. It started with diaries and journaling, turned into writing down ideas that I wouldn't work on, until recently when I found time to finally start writing. I've written a few poems so far, and I am working on a book as well. Writing really helps me express myself, share my imagination, dreams, and views, and give insight into my character, thoughts, and feelings.</dd>
-      <dt>✦ Drawing</dt>
-      <dd>I sometimes draw, paint, or do digital art. It's a good way to show my artistic side, there are so many things everywhere that inspire me—the books I read, nature, life, and so on. I also draw a few scenes from the book that I am writing.</dd>
-      <dt>✦ Needlework</dt>
-      <dd>One of the many skills that I learned from school is needlework. I know how to embroider, stitch, and crochet. I stitch the most and I also learned how to knit but never really practiced that skill unlike the others. The feeling of wearing or using something that I made by myself is indescribable.</dd>
-    </dl>
-    <hr style="border-color: #D4A373;">
-    <h2 id="education" class="section-header">Education Background</h2>
-    <table>
-      <tr>
-        <th>Degree</th>
-        <th>Institution</th>
-        <th>Graduation Year</th>
-      </tr>
-      <tr>
-        <td>Bachelor of Computer Applications (BCA)</td>
-        <td>S Degree College For Women</td>
-        <td>2025</td>
-      </tr>
-      <tr>
-        <td>Intermediate (12th Grade)</td>
-        <td>M Junior College</td>
-        <td>2022</td>
-      </tr>
-      <tr>
-        <td>High School</td>
-        <td>PE Girls High School</td>
-        <td>2020</td>
-      </tr>
-    </table>
-    <hr style="border-color: #D4A373;">
-    <h2 id="projects" class="section-header">Projects</h2>
-    <h3 class="sub-header">Personal Portfolio Website</h3>
-    <p class="description">This is my very first project, built using HTML and inline CSS. It’s a simple personal website to introduce myself, showcase my interests, and track my progress as I learn full-stack development.</p>
-    <h3 class="sub-header">Coming Soon...</h3>
-    <p class="description">More projects will be added here as I continue learning and exploring frontend and backend technologies.</p>
-
-    <hr style="border-color: #D4A373;">
-    
-    <h2 id="contact" class="section-header">Contact</h2>
-    <p>If you'd like to get in touch, feel free to reach out:</p>
-
-     Contact Form 
-    <form action="https://formspree.io/f/mdkerogd" method="POST">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
-      
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-  <div class="pinterest-embed">
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=873979871454030965" height="200" width="250" frameborder="0" scrolling="no"></iframe>
-</div>
-<!--<footer style="background-color: #8C705E; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px;">
-  <p>&copy; 2025 Munazza J | All rights reserved.</p>
-  <p>Follow me on:
-    <a href="https://www.linkedin.com/in/m-j-9711b8343" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">LinkedIn</a> |
-    <a href="https://github.com/Munazza-J" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">GitHub</a> |
-    <a href="https://www.instagram.com" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">Instagram</a>
-  </p>
-</footer>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-<footer style="background-color: #8C705E; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px;">
-  <p>&copy; 2025 Munazza Jabeen | All rights reserved.</p>
-  <p>Follow me on:
-    <a href="https://www.linkedin.com/in/m-j-9711b8343" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-linkedin"></i>
-    </a> |
-    <a href="https://github.com/Munazza-J" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-github"></i>
-    </a> |
-    <a href="https://www.instagram.com" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </p>
-</footer>
-
-
-</body>
-</html>-->
-
-
-
-
-
-
-<!--<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Munazza's Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="favicon1.ico">
-  <style>
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .header {
-      margin-top: 80px;
-      text-align: center;
-    }
-
-    .header h1 {
-      color: #7C5E4E;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #8C705E;
-      z-index: 1000;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-      border-bottom: 1px solid #B39283;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0 10px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 20px;
-      display: inline-block;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background-color: #F3E9DD;
-      color: #6D5844;
-      border-radius: 5px;
-    }
-
-    nav ul li a.active {
-      background-color: #B39283;
-      color: #F3E9DD;
-    }
-
-    .section-header {
-      color: #B39283;
-    }
-
-    .sub-header {
-      color: #8D6A5D;
-    }
-
-    .description {
-      font-size: 1.1em;
-    }
-
-    dl {
-      margin-top: 10px;
-    }
-
-    dt {
-      font-weight: bold;
-      background-color: #F3E9DD;
-      padding: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      color: #6D5844;
-    }
-
-    dt:hover {
-      background-color: #E6D3C3;
-    }
-
-    dd {
-      display: none;
-      margin: 0 0 10px 20px;
-    }
-
-    dt:hover + dd {
-      display: block;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-
-    tr:hover {
-      background-color: #E6D3C3; 
-    }
-
-    th {
-      background-color: #8C705E;
-      color: #fff;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .section-padding {
-      padding-top: 70px;
-    }
-   .pinterest-embed {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-iframe {
-  max-width: 100%;
-  height: auto;
-}
-</style>
-<style>
-  #about-me, #education, #projects, #contact {
-  padding-top: 80px;      
-  margin-top: -80px;  
-}
-</style>
-</head>
-<body style="background-color: #F3E9DD; color: #4A3F35; margin: 0;">
-  <div class="container">
-    <header class="header">
-      <h1>Munazza J</h1>
-      <p>Learning to build the web, one line at a time.</p>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <img src="mee.png" alt="ME" width="200" />
-    <h2 id="about-me" class="section-header">About Me</h2>
-    <p class="description">Hey, I am Munazza, and I am a BCA final year student. <br>I enrolled in this Full Stack Development course to build my skills in both frontend and backend technologies. I'm excited to learn and implement what I’ve learned to create websites, applications, and real-world projects as I grow in this field.</p>
-
-    <h3 class="sub-header">Hobbies</h3>
-    <p class="description">I often escape into books, sketch scenes from my imagination, and write stories—basically, I love creating things, whether it’s with words, lines, or code.<br>These things help me disconnect from the real world while giving me a way to express myself. I think that’s why coding calls to me—it’s another way to bring my ideas to life and share them with others.</p>
-    <dl>
-      <dt>✦ Reading</dt>
-      <dd>I like to read books of various genres. This is a hobby that I picked back in school when my teachers used to encourage us to read as much as we could. I like to read Classics, High Fantasy, Historical Fiction, and Mystery. Reading is a way for me to live countless lives through different characters, understand the world through different minds, look at things through different points of view, and experience a lot of things that I might not be able to do in real life.</dd>
-      <dt>✦ Writing</dt>
-      <dd>All the reading naturally inspired me to write my own stories. It started with diaries and journaling, turned into writing down ideas that I wouldn't work on, until recently when I found time to finally start writing. I've written a few poems so far, and I am working on a book as well. Writing really helps me express myself, share my imagination, dreams, and views, and give insight into my character, thoughts, and feelings.</dd>
-      <dt>✦ Drawing</dt>
-      <dd>I sometimes draw, paint, or do digital art. It's a good way to show my artistic side, there are so many things everywhere that inspire me—the books I read, nature, life, and so on. I also draw a few scenes from the book that I am writing.</dd>
-      <dt>✦ Needlework</dt>
-      <dd>One of the many skills that I learned from school is needlework. I know how to embroider, stitch, and crochet. I stitch the most and I also learned how to knit but never really practiced that skill unlike the others. The feeling of wearing or using something that I made by myself is indescribable.</dd>
-    </dl>
-    <hr style="border-color: #D4A373;">
-    <h2 id="education" class="section-header">Education Background</h2>
-    <table>
-      <tr>
-        <th>Degree</th>
-        <th>Institution</th>
-        <th>Graduation Year</th>
-      </tr>
-      <tr>
-        <td>Bachelor of Computer Applications (BCA)</td>
-        <td>S Degree College For Women</td>
-        <td>2025</td>
-      </tr>
-      <tr>
-        <td>Intermediate (12th Grade)</td>
-        <td>M Junior College</td>
-        <td>2022</td>
-      </tr>
-      <tr>
-        <td>High School</td>
-        <td>PE Girls High School</td>
-        <td>2020</td>
-      </tr>
-    </table>
-    <hr style="border-color: #D4A373;">
-    <h2 id="projects" class="section-header">Projects</h2>
-    <h3 class="sub-header">Personal Portfolio Website</h3>
-    <p class="description">This is my very first project, built using HTML and inline CSS. It’s a simple personal website to introduce myself, showcase my interests, and track my progress as I learn full-stack development.</p>
-    <h3 class="sub-header">Coming Soon...</h3>
-    <p class="description">More projects will be added here as I continue learning and exploring frontend and backend technologies.</p>
-
-    <hr style="border-color: #D4A373;">
-    
-    <h2 id="contact" class="section-header">Contact</h2>
-    <p>If you'd like to get in touch, feel free to reach out:</p>
-    <p><strong>Email:</strong> <a href="mailto:munazza2799@outlook.com">munazza2799@outlook.com</a></p>
-  </div>
-  <div class="pinterest-embed">
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=873979871454030965" height="200" width="250" frameborder="0" scrolling="no"></iframe>
-</div>
-<footer style="background-color: #8C705E; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px;">
-  <p>&copy; 2025 Munazza J | All rights reserved.</p>
-  <p>Follow me on:
-    <a href="https://www.linkedin.com/in/m-j-9711b8343" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">LinkedIn</a> |
-    <a href="https://github.com/Munazza-J" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">GitHub</a> |
-    <a href="https://www.instagram.com" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">Instagram</a>
-  </p>
-</footer>
-</body>
-</html>-->
-
-
-
-
-
-
-
-
-
-<!--PHOTO NEXT TO THE ABOUT ME-->
-
-<!--<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Munazza's Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="favicon1.ico">
-  <style>
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .header {
-      margin-top: 80px;
-      text-align: center;
-    }
-
-    .header h1 {
-      color: #7C5E4E;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #8C705E;
-      z-index: 1000;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-      border-bottom: 1px solid #B39283;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0 10px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 20px;
-      display: inline-block;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background-color: #F3E9DD;
-      color: #6D5844;
-      border-radius: 5px;
-    }
-
-    nav ul li a.active {
-      background-color: #B39283;
-      color: #F3E9DD;
-    }
-
-    .section-header {
-      color: #B39283;
-    }
-
-    .sub-header {
-      color: #8D6A5D;
-    }
-
-    .description {
-      font-size: 1.1em;
-    }
-
-    dl {
-      margin-top: 10px;
-    }
-
-    dt {
-      font-weight: bold;
-      background-color: #F3E9DD;
-      padding: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      color: #6D5844;
-    }
-
-    dt:hover {
-      background-color: #E6D3C3;
-    }
-
-    dd {
-      display: none;
-      margin: 0 0 10px 20px;
-    }
-
-    dt:hover + dd {
-      display: block;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-
-    tr:hover {
-      background-color: #E6D3C3; 
-    }
-
-    th {
-      background-color: #8C705E;
-      color: #fff;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .section-padding {
-      padding-top: 70px;
-    }
-   .pinterest-embed {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-
-  iframe {
-    max-width: 100%;
-    height: auto;
-  }
-
-  form {
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-  }
-
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-
-  button {
-    background-color: #8C705E;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: #6D5844;
-  }
-
-  </style>
-  <style>
-    #about-me, #education, #projects, #contact {
-    padding-top: 80px;      
-    margin-top: -80px;  
-  }
-  </style>
-
-  style for footer-->
-  <!--<style>
-  footer a:hover {
-    color: #D4A373; /* Change to a highlight color when hovered */
-    text-decoration: underline;
-  }
-</style>--
-<style>
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.about-text {
-  flex: 1 1 60%;
-}
-
-.about-image {
-  flex: 1 1 35%;
-  text-align: center;
-}
-
-
-.about-image img {
-  width: 180px; /* or 150px if you want it even smaller */
-  height: auto;
-  border-radius: 10px;
-}
-</style>
-
-
-</head>
-<body style="background-color: #F3E9DD; color: #4A3F35; margin: 0;">
-  <div class="container">
-    <header class="header">
-      <h1>Munazza J</h1>
-      <p>Learning to build the web, one line at a time.</p>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-        <div class="about-container">
-  <div class="about-text">
-    <h2 id="about-me" class="section-header">About Me</h2>
-    <p class="description">Hey, I am Munazza, and I am a BCA final year student. <br>
-    I enrolled in this Full Stack Development course to build my skills in both frontend and backend technologies. I'm excited to learn and implement what I’ve learned to create websites, applications, and real-world projects as I grow in this field.</p>
-  </div>
-  <div class="about-image">
-    <img src="mee.png" alt="A picture to represent me" />
-  </div>
-</div>
-
-    <h3 class="sub-header">Hobbies</h3>
-    <p class="description">I often escape into books, sketch scenes from my imagination, and write stories—basically, I love creating things, whether it’s with words, lines, or code.<br>These things help me disconnect from the real world while giving me a way to express myself. I think that’s why coding calls to me—it’s another way to bring my ideas to life and share them with others.</p>
-    <dl>
-      <dt>✦ Reading</dt>
-      <dd>I like to read books of various genres. This is a hobby that I picked back in school when my teachers used to encourage us to read as much as we could. I like to read Classics, High Fantasy, Historical Fiction, and Mystery. Reading is a way for me to live countless lives through different characters, understand the world through different minds, look at things through different points of view, and experience a lot of things that I might not be able to do in real life.</dd>
-      <dt>✦ Writing</dt>
-      <dd>All the reading naturally inspired me to write my own stories. It started with diaries and journaling, turned into writing down ideas that I wouldn't work on, until recently when I found time to finally start writing. I've written a few poems so far, and I am working on a book as well. Writing really helps me express myself, share my imagination, dreams, and views, and give insight into my character, thoughts, and feelings.</dd>
-      <dt>✦ Drawing</dt>
-      <dd>I sometimes draw, paint, or do digital art. It's a good way to show my artistic side, there are so many things everywhere that inspire me—the books I read, nature, life, and so on. I also draw a few scenes from the book that I am writing.</dd>
-      <dt>✦ Needlework</dt>
-      <dd>One of the many skills that I learned from school is needlework. I know how to embroider, stitch, and crochet. I stitch the most and I also learned how to knit but never really practiced that skill unlike the others. The feeling of wearing or using something that I made by myself is indescribable.</dd>
-    </dl>
-    <hr style="border-color: #D4A373;">
-    <h2 id="education" class="section-header">Education Background</h2>
-    <table>
-      <tr>
-        <th>Degree</th>
-        <th>Institution</th>
-        <th>Graduation Year</th>
-      </tr>
-      <tr>
-        <td>Bachelor of Computer Applications (BCA)</td>
-        <td>S Degree College For Women</td>
-        <td>2025</td>
-      </tr>
-      <tr>
-        <td>Intermediate (12th Grade)</td>
-        <td>M Junior College</td>
-        <td>2022</td>
-      </tr>
-      <tr>
-        <td>High School</td>
-        <td>PE Girls High School</td>
-        <td>2020</td>
-      </tr>
-    </table>
-    <hr style="border-color: #D4A373;">
-    <h2 id="projects" class="section-header">Projects</h2>
-    <h3 class="sub-header">Personal Portfolio Website</h3>
-    <p class="description">This is my very first project, built using HTML and inline CSS. It’s a simple personal website to introduce myself, showcase my interests, and track my progress as I learn full-stack development.</p>
-    <h3 class="sub-header">Coming Soon...</h3>
-    <p class="description">More projects will be added here as I continue learning and exploring frontend and backend technologies.</p>
-
-    <hr style="border-color: #D4A373;">
-    
-    <h2 id="contact" class="section-header">Contact</h2>
-    <p>If you'd like to get in touch, feel free to reach out:</p>
-     Contact Form 
-    <form action="https://formspree.io/f/mdkerogd" method="POST">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
-      
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-      
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
-      
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-  <div class="pinterest-embed">
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=873979871454030965" height="200" width="250" frameborder="0" scrolling="no"></iframe>
-</div>
-<footer style="background-color: #8C705E; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px;">
-  <p>&copy; 2025 Munazza J | All rights reserved.</p>
-  <p>Follow me on:
-    <a href="https://www.linkedin.com/in/m-j-9711b8343" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">LinkedIn</a> |
-    <a href="https://github.com/Munazza-J" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">GitHub</a> |
-    <a href="https://www.instagram.com" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">Instagram</a>
-  </p>
-</footer>
-
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-<footer style="background-color: #8C705E; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px;">
-  <p>&copy; 2025 Munazza J | All rights reserved.</p>
-  <p>Follow me on:
-    <a href="https://www.linkedin.com/in/m-j-9711b8343" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-linkedin"></i>
-    </a> |
-    <a href="https://github.com/Munazza-J" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-github"></i>
-    </a> |
-    <a href="https://www.instagram.com" target="_blank" style="color: #fff; text-decoration: none; margin: 0 10px;">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </p>
-</footer>--
-
-
-</body>
-</html>-->
-
-
-
-
-
-
-<!--<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Munazza's Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="favicon1.ico">
-  <style>
-    dl {
-      margin-top: 10px;
-    }
-
-    dt {
-      font-weight: bold;
-      background-color: #F3E9DD;
-      padding: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      color: #6D5844;
-    }
-
-    dt:hover {
-      background-color: #E6D3C3;
-    }
-
-    dd {
-      display: none;
-      margin: 0 0 10px 20px;
-    }
-
-    dt:hover + dd {
-      display: block;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 10px;
-      text-align: left;
-    }
-    tr:hover {
-      background-color: #E6D3C3; 
-    }
-    th {
-      background-color: #D4A373;
-      color: #fff;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #8C705E;
-      z-index: 1000;
-      padding: 10px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* subtle shadow */
-      border-bottom: 1px solid #B39283
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    nav ul li {
-      display: inline-block;
-      margin: 0 10px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 10px 20px;
-      display: inline-block;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background-color: #F3E9DD;
-      color: #6D5844;
-      border-radius: 5px;
-    }
-
-    nav ul li a.active {
-      background-color: #B39283;
-      color: #F3E9DD;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* Add padding to sections */
-    #about-me, #education, #projects, #contact {
-      padding-top: 70px; /* Adjust this value as needed */
-    }
-  </style>
-</head>
-<body style="background-color: #F3E9DD; color: #4A3F35; margin: 0; padding-top: 80px">
-  <div style="max-width: 1000px; margin: auto; padding: 20px;">
-    <header style="margin-top: 80px; text-align: center;">
-      <h1 style="color: #7C5E4E;">Munazza</h1>
-      <p>Learning to build the web, one line at a time.</p>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <img src="mee.png" alt="ME" width="200" />
-    <h2 id="about-me" style="color: #B39283;">About Me</h2>
-    <p>Hey, I am Munazza, and I am a BCA final year student. <br>I enrolled in this Full Stack Development course to build my skills in both frontend and backend technologies. I'm excited to learn and implement what I’ve learned to create websites, applications, and real-world projects as I grow in this field.</p>
-
-    <h3 style="color: #8D6A5D;">Hobbies</h3>
-    <p>I often escape into books, sketch scenes from my imagination, and write stories—basically, I love creating things, whether it’s with words, lines, or code.<br>These things help me disconnect from the real world while giving me a way to express myself. I think that’s why coding calls to me—it’s another way to bring my ideas to life and share them with others.</p>
-    <dl>
-      <dt>✦ Reading</dt>
-      <dd>I like to read books of various genres. This is a hobby that I picked back in school when my teachers used to encourage us to read as much as we could. I like to read Classics, High Fantasy, Historical Fiction, and Mystery. Reading is a way for me to live countless lives through different characters, understand the world through different minds, look at things through different points of view, and experience a lot of things that I might not be able to do in real life.</dd>
-      <dt>✦ Writing</dt>
-      <dd>All the reading naturally inspired me to write my own stories. It started with diaries and journaling, turned into writing down ideas that I wouldn't work on, until recently when I found time to finally start writing. I've written a few poems so far, and I am working on a book as well. Writing really helps me express myself, share my imagination, dreams, and views, and give insight into my character, thoughts, and feelings.</dd>
-      <dt>✦ Drawing</dt>
-      <dd>I sometimes draw, paint, or do digital art. It's a good way to show my artistic side, there are so many things everywhere that inspire me—the books I read, nature, life, and so on. I also draw a few scenes from the book that I am writing.</dd>
-      <dt>✦ Needlework</dt>
-      <dd>One of the many skills that I learned from school is needlework. I know how to embroider, stitch, and crochet. I stitch the most and I also learned how to knit but never really practiced that skill unlike the others. The feeling of wearing or using something that I made by myself is indescribable.</dd>
-    </dl>
-    <hr style="border-color: #D4A373;">
-    <h2 id="education" style="color: #B39283;">Education Background</h2>
-    <table style="width: 100%; border-collapse: collapse;">
-      <tr>
-        <th style="background-color: #8C705E; color: #fff; padding: 10px; text-align: left;">Degree</th>
-        <th style="background-color: #8C705E; color: #fff; padding: 10px; text-align: left;">Institution</th>
-        <th style="background-color: #8C705E; color: #fff; padding: 10px; text-align: left;">Graduation Year</th>
-      </tr>
-      <tr>
-        <td style="padding: 10px;">Bachelor of Computer Applications (BCA)</td>
-        <td style="padding: 10px;">S Degree College For Women</td>
-        <td style="padding: 10px;">2025</td>
-      </tr>
-      <tr>
-        <td style="padding: 10px;">Intermediate (12th Grade)</td>
-        <td style="padding: 10px;"> M Junior College</td>
-        <td style="padding: 10px;">2022</td>
-      </tr>
-      <tr>
-        <td style="padding: 10px;">High School</td>
-        <td style="padding: 10px;">PE Girls High School</td>
-        <td style="padding: 10px;">2020</td>
-      </tr>
-    </table>
-    <hr style="border-color: #D4A373;">
-    <h2 id="projects" style="color: #B39283;">Projects</h2>
-    <h3 style="color: #8D6A5D;">Personal Portfolio Website</h3>
-    <p>This is my very first project, built using HTML and inline CSS. It’s a simple personal website to introduce myself, showcase my interests, and track my progress as I learn full-stack development.</p>
-    <h3 style="color: #8D6A5D;">Coming Soon...</h3>
-    <p>More projects will be added here as I continue learning and exploring frontend and backend technologies.</p>
-
-    <hr style="border-color: #D4A373;">
-    
-    <h2 id="contact" style="color: #B39283;">Contact</h2>
-    <p>If you'd like to get in touch, feel free to reach out:</p>
-    <p><strong>Email:</strong> <a href="mailto:munazza2799@outlook.com">munazza2799@outlook.com</a></p>
-  </div>
-</body>
-</html>
-
-
-
-
-
-<!--<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Munazza's Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="favicon1.ico">
-  <style>
-  dl {
-    margin-top: 10px;
-  }
-
-  dt {
-    font-weight: bold;
-    background-color: #F3E9DD;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    color: #6D5844;
-  }
-
-  dt:hover {
-    background-color: #E6D3C3;
-  }
-
-  dd {
-    display: none;
-    margin: 0 0 10px 20px;
-  }
-
-  dt:hover + dd {
-    display: block;
-  }
-</style>
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  th, td {
-    padding: 10px;
-    text-align: left;
-  }
-  tr:hover {
-    background-color: #E6D3C3; 
-  }
-  th {
-    background-color: #D4A373;
-    color: #fff;
-  }
-</style>
-  
-<style>
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  background-color: #8C705E;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: #fff;  
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px 20px;
-  display: inline-block;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: #F3E9DD;  
-  color: #6D5844;  
-  border-radius: 5px;
-}
-nav ul li a.active {
-  background-color: #B39283;  
-  color: #F3E9DD;  
-
-</style>
-
-</head>
-<body style="background-color: #F3E9DD; color: #4A3F35;">
-  <header>
-    <h1 style="color: #7C5E4E;">Munazza</h1>
-    <p>Learning to build the web, one line at a time.</p>
-    <nav>
-  <ul>
-    <li>
-      <a href="#about-me">About Me</a>
-    </li>
-    <li>
-      <a href="#education">Education</a>
-    </li>
-    <li>
-      <a href="#projects">Projects</a>
-    </li>
-    <li>
-      <a href="#contact">Contact</a>
-    </li>
-  </ul>
-</nav>
-
-  </header>
-  <img src="mee.png" alt="ME" width="200" />
-  <h2 id="about-me" style="color: #B39283;">About Me</h2>
-  <p>Hey, I am Munazza, and I am a BCA final year student. <br>I enrolled in this Full Stack Development course to build my skills in both frontend and backend technologies. I'm excited to learn and implement what I’ve learned to create websites, applications, and real-world projects as I grow in this field.</p>
-
-    <h3 style="color: #8D6A5D;">Hobbies</h3>
-  <p>I often escape into books, sketch scenes from my imagination, and write stories—basically, I love creating things, whether it’s with words, lines, or code.<br>These things help me disconnect from the real world while giving me a way to express myself. I think that’s why coding calls to me—it’s another way to bring my ideas to life and share them with others.</p>
-  <dl>
-    <dt>✦ Reading</dt>
-  <dd>I like to read books of varoius genres. This is a hobby that I picked back in school when my teachers used to encourage us to read as much as we could. I like to read Classics, High Fantasy, Historical Fiction and Mystery. Reading is a way for me to live countless lives through different characters, understand the world through different minds, look at things through different point-of-views and experience a lot of things that i might not be able to do in real life.</dd>
-    <dt>✦ Writing</dt>
-  <dd>All the reading naturally inspired me to write my own stories. It started with diaries and journaling, turned into writing down ideas that I wouldn't work on, until recently when i found to finally start writing. I've written a few poems so far, I am working on a book as well. Writing really helps me express myself, share my imagination, dreams and views, and to give insight on my character, thoughts and feelings.</dd>
-    <dt>✦ Drawing</dt>
-  <dd>I sometimes draw, paint or do digital art. It's a good way to show my artistic side, there are so many things everywhere that inspire me, the books I read, nature, life, and so on. I also draw a few scenes from the book that I am writing.</dd>
-    <dt>✦ Needlework</dt>
-  <dd>One of the many skills that I learned from school is needlework. I know how to embroider, stitch and crochet. I stitch the most and I also learned how to knit but never really practiced that skill unlike the others. The feeling of wearing or using something that I made by myself is indescribable. </dd>
-    </dl>
-  <hr style="border-color: #D4A373;">
-  <h2 id="education" style="color: #B39283;">Education Background</h2>
-<table style="width: 100%; border-collapse: collapse;">
-  <tr>
-    <th style="background-color: #8C705E; color: #fff; padding: 10px; text-align: left;">Degree</th>
-    <th style="background-color: #8C705E; color: #fff; padding: 10px; text-align: left;">Institution</th>
-    <th style="background-color: #8C705E; color: #fff; padding: 10px; text-align: left;">Graduation Year</th>
-  </tr>
-  <tr>
-    <td style="padding: 10px;">Bachelor of Computer Applications (BCA)</td>
-    <td style="padding: 10px;">S Degree College For Women</td>
-    <td style="padding: 10px;">2025</td>
-  </tr>
-  <tr>
-    <td style="padding: 10px;">Intermediate (12th Grade)</td>
-    <td style="padding: 10px;"> M Junior College</td>
-    <td style="padding: 10px;">2022</td>
-  </tr>
-  <tr>
-    <td style="padding: 10px;">High School</td>
-    <td style="padding: 10px;">PE Girls High School</td>
-    <td style="padding: 10px;">2020</td>
-  </tr>
-</table>
-  <hr style="border-color: #D4A373;">
-  <h2 id="projects" style="color: #B39283;">Projects</h2>
-  <h3 style="color: #8D6A5D;">Personal Portfolio Website</h3>
-  <p>This is my very first project, built using HTML and inline CSS. It’s a simple personal website to introduce myself, showcase my interests, and track my progress as I learn full stack development.</p>
-  <h3 style="color: #8D6A5D;">Coming Soon...</h3>
-  <p>More projects will be added here as I continue learning and exploring frontend and backend technologies.</p>
-
-  <hr style="border-color: #D4A373;">
-  
-  <h2 id="contact" style="color: #B39283;">Contact</h2>
- <p>If you'd like to get in touch, feel free to reach out:</p>
-<p><strong>Email:</strong> <a href="mailto:munazza2799@outlook.com">munazza2799@outlook.com</a></p>
-</body>
-</html>-->
